@@ -376,7 +376,17 @@ Item {
             // 添加到音符列表
             notes.push(note);
             return note;
+        } else if (noteComponent.status === Component.Error) {
+            // 输出错误信息
+            console.error("Error creating note component:", noteComponent.errorString());
+        } else if (noteComponent.status === Component.Loading) {
+            // 组件正在加载
+            console.log("Note component is still loading");
+        } else {
+            // 其他状态
+            console.log("Note component status:", noteComponent.status);
         }
+        return null;
     }
     
     // 删除音符

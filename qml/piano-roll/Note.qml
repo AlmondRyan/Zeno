@@ -12,6 +12,8 @@ Rectangle {
     // 属性
     property string noteName: "C4"  // 音符名称，如C4, D#5等
     property bool selected: false   // 是否被选中
+    property real originalX         // 拖动时记录原始X位置
+    property real originalY         // 拖动时记录原始Y位置
     
     // 显示音符名称的文本
     Text {
